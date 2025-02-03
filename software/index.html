@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Expert Tarkvara Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background-color: #20638f;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            background-color: #20638f;
+        }
+        .tabs a {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #20638f;
+            border: 1px solid #ffffff;
+            margin: 0 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .tabs a:hover {
+            background-color: #003366;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>Dog Expert Tarkvara Site</header>
+    <div class="tabs">
+        <a href="javascript:void(0)" class="tab-link" onclick="openTab(event, 'software')">Tarkvara</a>
+        <a href="javascript:void(0)" class="tab-link" onclick="openTab(event, 'contact')">Kontakt</a>
+		<a href="javascript:void(0)" class="tab-link" onclick="openTab(event, 'walper')">Taustapildid</a>
+		<a href="javascript:void(0)" class="tab-link" onclick="openTab(event, 'myimg')">Minu Pilt</a>
+    </div>
+
+    <div id="software" class="tab-content">
+        <h3>Tarkvara</h3>
+        <p>Laadige alla tarkvara meie <a href="https://drive.google.com/drive/folders/1bJp3OsSDfWX4qbyz3Qx7MWpE2lRWz1RX?usp=sharing" target="_blank">Google Drive'i kaustast</a>.</p>
+        <h4>Soovitatavad tarkvarad:</h4>
+        <ul>
+            <li><a href="https://drive.usercontent.google.com/download?id=181nPMHHlDXzEPNC-kaClvWCcA7WA0bUs&export=download&authuser=0&confirm=t&uuid=ae14215e-9c86-4058-9ee7-edbee9d8615a&at=AIrpjvNDC0CZ0u7fPo0y_v078J6M:1738600222187" target="_blank">Programmid</a> - Terve pakk aastast 2024.</li>
+            <li><a href="https://drive.usercontent.google.com/download?id=17YaYGyyYSqCTyzfQJdb8ajIxttyluc4T&export=download&authuser=0&confirm=t&uuid=5ac790ac-8d8d-43d0-b299-c6490f56a0ae&at=AIrpjvM4GJ7S23TtiPPTYyvrUI3o:1738603113569" target="_blank">Microsoft Activation</a> - Aktiveerimine testimis ettevõtmisel.</li>
+            <li><a href="https://drive.usercontent.google.com/download?id=1n6cbb2ilIf9rnF3ATWqWewEF3GUt8dLr&export=download&authuser=0&confirm=t&uuid=6b7e33ef-c9eb-4433-9466-9037e5574a2c&at=AIrpjvPWwSGwy3BA5nNs0eafEFjk:1738603366012" target="_blank">Aio Rutaimes</a> - Installib kõik draiverid ära et saab mängida.</li>
+			
+			<p>Nendel om ka password teadsaamiseks võtke ühendust emailiga<p>
+			 <a href="javascript:void(0)" class="tab-link" onclick="openTab(event, 'contact')">Kontakt</a>
+        </ul>
+    </div>
+
+    <div id="walper" class="tab-content">
+        <h3>Taustapildid</h3>
+        <p>Siit leiate kõik Dog Expert taustapildide kogu Neid hosted google drive.</p>
+		<a href="https://drive.google.com/drive/folders/1Jhn7yGQZHkhq_BM8rH0DDMC9ra9lfwCC" target="_blank">Taustapildid</a>
+    </div>
+
+    <div id="contact" class="tab-content">
+        <h3>Kontakt</h3>
+        <p>Võtke meiega ühendust e-posti teel: <a href="mailto:dog.expert900@gmail.com">dog.expert900@gmail.com</a>.</p>
+    </div>
+
+    <div id="myimg" class="tab-content">
+        <h3>Minu Pilt</h3>
+        <img src="https://raw.githubusercontent.com/dogexpert90/dogexperttech.github.io/refs/heads/main/data/images/dog01.jpg" alt="Mina olen Dog Expert" width="800" height="792"> 
+        </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            // Peida kõik tabid
+            var tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(function(tab) {
+                tab.classList.remove('active');
+            });
+
+            // Eemalda kõik lingid aktiivsetelt
+            var tabLinks = document.querySelectorAll('.tab-link');
+            tabLinks.forEach(function(link) {
+                link.style.backgroundColor = '#20638f';
+            });
+
+            // Kuvage valitud tab ja tee see aktiivseks
+            document.getElementById(tabName).classList.add('active');
+            evt.currentTarget.style.backgroundColor = '#003366';
+        }
+    </script>
+</body>
+</html>
